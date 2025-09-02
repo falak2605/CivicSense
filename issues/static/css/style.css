@@ -1,0 +1,22 @@
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0;background:#f6f8fb;color:#1f2937}
+header{background:#1f2937;color:#fff;padding:24px 16px;text-align:center}
+h1{margin:0;font-size:28px}
+.tagline{opacity:.9;margin-top:6px}
+main{max-width:1000px;margin:20px auto;padding:0 16px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.form-card,.list-card{background:#fff;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.06);padding:18px}
+label{display:block;font-weight:600;margin-top:10px}
+input,textarea,select,button{width:100%;padding:10px;border:1px solid #d1d5db;border-radius:8px;margin-top:6px}
+textarea{min-height:110px;resize:vertical}
+button{background:#111827;color:#fff;border:none;cursor:pointer;font-weight:600}
+button:hover{filter:brightness(.95)}
+.coords{display:grid;grid-template-columns:1fr 1fr auto;gap:8px;align-items:end;margin-top:8px}
+.issue{padding:12px;border-bottom:1px solid #eee}
+.issue h3{margin:0 0 6px 0;font-size:18px}
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;margin-right:6px;background:#e5e7eb}
+.badge.status-Pending{background:#fee2e2}
+.badge.status-In\ Progress{background:#fef9c3}
+.badge.status-Resolved{background:#dcfce7}
+.meta{font-size:12px;color:#6b7280;margin-top:6px}
+footer{max-width:1000px;margin:20px auto;padding:0 16px;color:#6b7280}
+@media(max-width:800px){main{grid-template-columns:1fr}}

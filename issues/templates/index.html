@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CivicSense</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header>
+    <h1>CivicSense</h1>
+    <p class="tagline">Report issues. Track progress. Improve your campus/city.</p>
+  </header>
+
+  <main>
+    <section class="form-card">
+      <h2>Report an Issue</h2>
+      <form id="issueForm">
+        <label>Title</label>
+        <input type="text" id="title" placeholder="e.g., Broken streetlight near Hostel Road" required>
+
+        <label>Description</label>
+        <textarea id="description" placeholder="Describe the issue..." required></textarea>
+
+        <label>Category (optional)</label>
+        <select id="category">
+          <option value="">Auto-detect</option>
+          <option value="road">Road</option>
+          <option value="garbage">Garbage</option>
+          <option value="water">Water</option>
+          <option value="electricity">Electricity</option>
+          <option value="other">Other</option>
+        </select>
+
+        <div class="coords">
+          <input type="number" step="any" id="lat" placeholder="Latitude (optional)">
+          <input type="number" step="any" id="lng" placeholder="Longitude (optional)">
+          <button type="button" id="locateBtn">Use My Location</button>
+        </div>
+
+        <button type="submit">Submit Issue</button>
+      </form>
+    </section>
+
+    <section class="list-card">
+      <h2>Reported Issues</h2>
+      <ul id="issuesList"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <small>Built with Django • AI auto-categorization is rule-based (demo).</small>
+  </footer>
+
+  <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
